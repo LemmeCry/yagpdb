@@ -18,8 +18,6 @@ import (
 	_ "github.com/botlabs-gg/yagpdb/v2/bot" // register the custom orchestrator events
 )
 
-var ()
-
 func main() {
 	common.RedisPoolSize = 2
 	err := common.CoreInit(true)

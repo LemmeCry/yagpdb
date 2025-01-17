@@ -61,7 +61,7 @@ var getMember = &commands.YAGCommand{
 	},
 	RequiredArgs: 1,
 	HideFromHelp: true,
-	RunFunc:     util.RequireOwner(cmdFuncGetMember),
+	RunFunc:      util.RequireOwner(cmdFuncGetMember),
 }
 
 func cmdFuncGetMember(data *dcmd.Data) (interface{}, error) {

@@ -23,7 +23,7 @@ var msg = &Message{
 		Description: "abcd",
 	},
 	MessagesX: []*SubMessage{
-		&SubMessage{
+		{
 			Id:          2102,
 			Description: "abce",
 		},
@@ -33,11 +33,11 @@ var msg = &Message{
 		Description: "abcf",
 	},
 	MessagesY: []SubMessage{
-		SubMessage{
+		{
 			Id:          5102,
 			Description: "abcg",
 		},
-		SubMessage{
+		{
 			Id:          5106,
 			Description: "abcgg",
 		},

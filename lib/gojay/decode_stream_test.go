@@ -11,7 +11,6 @@ import (
 )
 
 // Basic Behaviour Tests
-//
 func TestDecoderImplementsContext(t *testing.T) {
 	var dec interface{} = &StreamDecoder{}
 	_ = dec.(context.Context)

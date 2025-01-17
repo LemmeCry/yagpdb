@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//Field represents a field.
+// Field represents a field.
 type Field struct {
 	Key                string
 	Init               string
@@ -46,7 +46,7 @@ type Field struct {
 	GojayMethod string
 }
 
-//NewField returns a new field
+// NewField returns a new field
 func NewField(owner *Struct, field *toolbox.FieldInfo, fieldType *toolbox.TypeInfo) (*Field, error) {
 	typeName := normalizeTypeName(field.TypeName)
 	var result = &Field{

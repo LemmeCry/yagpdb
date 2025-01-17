@@ -91,13 +91,13 @@ func max(a, b int) int {
 // descending order with respect to their similarity to the target string.
 //
 // By default,
-//  - Choices that are not sufficiently similar to the string are discarded based
-//    on an adaptive threshold. If a custom threshold is desired, use the WithThreshold
-//    option.
-//  - The number of choices that are returned is unlimited; to limit the
-//    number of returned results, use the WithLimit option.
-//  - The selection process is case-insensitive; to change this, use the WithCaseInsensitivity
-//    option.
+//   - Choices that are not sufficiently similar to the string are discarded based
+//     on an adaptive threshold. If a custom threshold is desired, use the WithThreshold
+//     option.
+//   - The number of choices that are returned is unlimited; to limit the
+//     number of returned results, use the WithLimit option.
+//   - The selection process is case-insensitive; to change this, use the WithCaseInsensitivity
+//     option.
 func Select(choices []string, target string, setters ...SelectOpt) []string {
 	opts := selectOpts{threshold: AdaptiveThreshold, limit: -1, caseSensitive: false}
 	for _, setter := range setters {

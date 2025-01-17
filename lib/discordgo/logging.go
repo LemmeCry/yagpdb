@@ -40,10 +40,11 @@ var GatewayLogger func(shardID int, connID int, msgL int, format string, a ...in
 
 // msglog provides package wide logging consistancy for discordgo
 // the format, a...  portion this command follows that of fmt.Printf
-//   msgL   : LogLevel of the messagez
-//   caller : 1 + the number of callers away from the message source
-//   format : Printf style message format
-//   a ...  : comma separated list of values to pass
+//
+//	msgL   : LogLevel of the messagez
+//	caller : 1 + the number of callers away from the message source
+//	format : Printf style message format
+//	a ...  : comma separated list of values to pass
 func msglog(msgL, caller int, format string, a ...interface{}) {
 
 	if Logger != nil {

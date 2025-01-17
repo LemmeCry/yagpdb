@@ -30,7 +30,8 @@ type Application struct {
 }
 
 // Application returns an Application structure of a specific Application
-//   appID : The ID of an Application
+//
+//	appID : The ID of an Application
 func (s *Session) Application(appID int64) (st *Application, err error) {
 
 	body, err := s.RequestWithBucketID("GET", EndpointApplication(appID), nil, nil, EndpointApplication(0))
@@ -67,8 +68,9 @@ func (s *Session) Applications() (st []*Application, err error) {
 }
 
 // ApplicationCreate creates a new Application
-//    name : Name of Application / Bot
-//    uris : Redirect URIs (Not required)
+//
+//	name : Name of Application / Bot
+//	uris : Redirect URIs (Not required)
 func (s *Session) ApplicationCreate(ap *Application) (st *Application, err error) {
 
 	data := struct {
@@ -87,7 +89,8 @@ func (s *Session) ApplicationCreate(ap *Application) (st *Application, err error
 }
 
 // ApplicationUpdate updates an existing Application
-//   var : desc
+//
+//	var : desc
 func (s *Session) ApplicationUpdate(appID int64, ap *Application) (st *Application, err error) {
 
 	data := struct {
@@ -106,7 +109,8 @@ func (s *Session) ApplicationUpdate(appID int64, ap *Application) (st *Applicati
 }
 
 // ApplicationDelete deletes an existing Application
-//   appID : The ID of an Application
+//
+//	appID : The ID of an Application
 func (s *Session) ApplicationDelete(appID int64) (err error) {
 
 	_, err = s.RequestWithBucketID("DELETE", EndpointApplication(appID), nil, nil, EndpointApplication(0))
@@ -123,7 +127,7 @@ func (s *Session) ApplicationDelete(appID int64) (err error) {
 
 // ApplicationBotCreate creates an Application Bot Account
 //
-//   appID : The ID of an Application
+//	appID : The ID of an Application
 //
 // NOTE: func name may change, if I can think up something better.
 func (s *Session) ApplicationBotCreate(appID int64) (st *User, err error) {

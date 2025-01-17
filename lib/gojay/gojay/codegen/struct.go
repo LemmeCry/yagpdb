@@ -16,7 +16,7 @@ type Struct struct {
 	Body  string
 }
 
-//Generate generates decoderCode + structRelease + encoderCode
+// Generate generates decoderCode + structRelease + encoderCode
 func (s *Struct) Generate() (string, error) {
 	return s.generateEncoding(s.TypeInfo)
 }

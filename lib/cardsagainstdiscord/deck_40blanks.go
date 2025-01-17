@@ -4,7 +4,7 @@ func init() {
 	pack := &CardPack{
 		Name:        "40-blanks",
 		Description: "Deck of 40 blank response cards",
-		Prompts: []*PromptCard{},
+		Prompts:     []*PromptCard{},
 		Responses: []ResponseCard{
 			`%blank`,
 			`%blank`,

@@ -20,7 +20,7 @@ func BenchmarkJsonIterDecodeObjMedium(b *testing.B) {
 }
 
 /*
-   github.com/buger/jsonparser
+github.com/buger/jsonparser
 */
 func BenchmarkJSONParserDecodeObjMedium(b *testing.B) {
 	b.ReportAllocs()

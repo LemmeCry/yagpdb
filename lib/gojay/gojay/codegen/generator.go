@@ -2,12 +2,12 @@ package codegen
 
 import (
 	"fmt"
+	"github.com/viant/toolbox"
 	"go/format"
 	"io/ioutil"
 	"os"
 	"path/filepath"
 	"strings"
-	"github.com/viant/toolbox"
 )
 
 const gojayPackage = "github.com/francoispqt/gojay"

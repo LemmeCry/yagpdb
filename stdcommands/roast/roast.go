@@ -22,8 +22,8 @@ var Command = &commands.YAGCommand{
 	RunFunc: func(data *dcmd.Data) (interface{}, error) {
 		roast := html.UnescapeString(randomRoast())
 		embed := &discordgo.MessageEmbed{
-			Title: data.Author.Username + " roasted ",
-			Footer: &discordgo.MessageEmbedFooter {Text: "Boom, roasted!"},
+			Title:  data.Author.Username + " roasted ",
+			Footer: &discordgo.MessageEmbedFooter{Text: "Boom, roasted!"},
 		}
 		if arg0 := data.Args[0].Value; arg0 != nil {
 			target := arg0.(*discordgo.User)

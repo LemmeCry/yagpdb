@@ -879,7 +879,7 @@ func (send *SendChannelMessageEffect) MergeDuplicates(data []interface{}) interf
 
 type SendModeratorAlertMessageData struct {
 	CustomMessage string `valid:",0,280,trimspace"`
-	LogChannel   int64
+	LogChannel    int64
 }
 
 type SendModeratorAlertMessageEffect struct{}
@@ -948,7 +948,7 @@ func (send *SendModeratorAlertMessageEffect) Apply(ctxData *TriggeredRuleData, s
 
 	msgEmbed := &discordgo.MessageEmbed{
 		Author: &discordgo.MessageEmbedAuthor{
-			Name: fmt.Sprintf("%s (ID: %d)", ctxData.MS.User.Username, ctxData.MS.User.ID),
+			Name:    fmt.Sprintf("%s (ID: %d)", ctxData.MS.User.Username, ctxData.MS.User.ID),
 			IconURL: ctxData.MS.User.AvatarURL("64"),
 		},
 		Footer: &discordgo.MessageEmbedFooter{
@@ -957,7 +957,7 @@ func (send *SendModeratorAlertMessageEffect) Apply(ctxData *TriggeredRuleData, s
 	}
 
 	msgEmbed.Fields = []*discordgo.MessageEmbedField{{
-		Name: "____",
+		Name:  "____",
 		Value: ctxData.MS.User.Mention(),
 	}}
 

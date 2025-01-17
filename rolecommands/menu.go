@@ -97,9 +97,9 @@ func cmdFuncRoleMenuCreate(parsed *dcmd.Data) (interface{}, error) {
 		OwnerID:   parsed.Author.ID,
 		ChannelID: parsed.ChannelID,
 
-		RoleGroupID:                null.Int64From(group.ID),
-		OwnMessage:                 true,
-		DisableSendDM:              parsed.Switches["nodm"].Value != nil && parsed.Switches["nodm"].Value.(bool),
+		RoleGroupID:   null.Int64From(group.ID),
+		OwnMessage:    true,
+		DisableSendDM: parsed.Switches["nodm"].Value != nil && parsed.Switches["nodm"].Value.(bool),
 		// `rr` is `true` by default, which is why we want
 		// a `true` value, if `.Value` is `nil`.
 		RemoveRoleOnReactionRemove: parsed.Switches["rr"].Value == nil || !parsed.Switches["rr"].Value.(bool),
